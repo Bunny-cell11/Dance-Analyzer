@@ -19,7 +19,7 @@ from typing import Any, NamedTuple, TypeVar
 
 # We need to import _compat itself in addition to the _compat members to avoid
 # having the thread-local in the globals here.
-from . import _compat, _config, setters
+from  import _compat, _config, setters
 from _compat import (
     PY_3_10_PLUS,
     PY_3_11_PLUS,
