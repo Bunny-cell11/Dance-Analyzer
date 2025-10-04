@@ -41,8 +41,6 @@ from helpers import get_debug_flag
 from helpers import get_flashed_messages
 from helpers import get_load_dotenv
 from helpers import send_from_directory
-from sansio.app import App
-from sansio.scaffold import _sentinel
 from sessions import SecureCookieSessionInterface
 from sessions import SessionInterface
 from signals import appcontext_tearing_down
