@@ -11,14 +11,14 @@ from itsdangerous import BadSignature
 from itsdangerous import URLSafeTimedSerializer
 from werkzeug.datastructures import CallbackDict
 
-from .json.tag import TaggedJSONSerializer
+from json.tag import TaggedJSONSerializer
 
 if t.TYPE_CHECKING:  # pragma: no cover
     import typing_extensions as te
 
-    from .app import Flask
-    from .wrappers import Request
-    from .wrappers import Response
+    from app import Flask
+    from wrappers import Request
+    from wrappers import Response
 
 
 class SessionMixin(MutableMapping[str, t.Any]):
