@@ -15,7 +15,6 @@ from werkzeug.test import Client
 from werkzeug.wrappers import Request as BaseRequest
 
 from cli import ScriptInfo
-from sessions import SessionMixin
 
 if t.TYPE_CHECKING:  # pragma: no cover
     from _typeshed.wsgi import WSGIEnvironment
