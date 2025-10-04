@@ -102,16 +102,16 @@ Exceptions to this rule are documented.
 import sys
 import warnings
 
-from ._globals import _NoValue, _CopyMode
+from _globals import _NoValue, _CopyMode
 # These exceptions were moved in 1.25 and are hidden from __dir__()
-from .exceptions import (
+from exceptions import (
     ComplexWarning, ModuleDeprecationWarning, VisibleDeprecationWarning,
     TooHardError, AxisError)
 
 
 # If a version with git hash was stored, use that instead
-from . import version
-from .version import __version__
+from import version
+from version import __version__
 
 # We first need to detect if we're being called as part of the numpy setup
 # procedure itself in a reliable manner.
@@ -142,14 +142,14 @@ else:
     __deprecated_attrs__ = {}
 
     from . import core
-    from .core import *
+    from core import *
     from . import compat
     from . import exceptions
     from . import dtypes
     from . import lib
     # NOTE: to be revisited following future namespace cleanup.
     # See gh-14454 and gh-15672 for discussion.
-    from .lib import *
+    from lib import *
 
     from . import linalg
     from . import fft
@@ -158,7 +158,7 @@ else:
     from . import ctypeslib
     from . import ma
     from . import matrixlib as _mat
-    from .matrixlib import *
+    from matrixlib import *
 
     # Deprecations introduced in NumPy 1.20.0, 2020-06-06
     import builtins as _builtins
@@ -230,7 +230,7 @@ else:
 
     del math, _msg, _type_info
 
-    from .core import abs
+    from core import abs
     # now that numpy modules are imported, can initialize limits
     core.getlimits._register_known_types()
 
