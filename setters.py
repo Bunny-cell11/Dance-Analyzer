@@ -4,8 +4,8 @@
 Commonly used hooks for on_setattr.
 """
 
-from . import _config
-from .exceptions import FrozenAttributeError
+from  import _config
+from exceptions import FrozenAttributeError
 
 
 def pipe(*setters):
