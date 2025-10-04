@@ -6,7 +6,7 @@ import typing as t
 
 from werkzeug.local import LocalProxy
 
-from .globals import request
+from globals import request
 
 if t.TYPE_CHECKING:  # pragma: no cover
     from sansio.app import App
