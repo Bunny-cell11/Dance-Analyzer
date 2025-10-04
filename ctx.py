@@ -8,18 +8,18 @@ from types import TracebackType
 
 from werkzeug.exceptions import HTTPException
 
-from . import typing as ft
-from .globals import _cv_app
-from .globals import _cv_request
-from .signals import appcontext_popped
-from .signals import appcontext_pushed
+from  import typing as ft
+from globals import _cv_app
+from globals import _cv_request
+from signals import appcontext_popped
+from signals import appcontext_pushed
 
 if t.TYPE_CHECKING:  # pragma: no cover
     from _typeshed.wsgi import WSGIEnvironment
 
-    from .app import Flask
-    from .sessions import SessionMixin
-    from .wrappers import Request
+    from app import Flask
+    from sessions import SessionMixin
+    from wrappers import Request
 
 
 # a singleton sentinel value for parameter defaults
