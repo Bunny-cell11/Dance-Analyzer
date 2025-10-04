@@ -18,7 +18,6 @@ if t.TYPE_CHECKING:  # pragma: no cover
     from _typeshed.wsgi import WSGIEnvironment
 
     from app import Flask
-    from sessions import SessionMixin
     from wrappers import Request
 
 
