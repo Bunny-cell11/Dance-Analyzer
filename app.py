@@ -26,8 +26,8 @@ from werkzeug.serving import is_running_from_reloader
 from werkzeug.wrappers import Response as BaseResponse
 from werkzeug.wsgi import get_host
 
-from . import cli
-from . import typing as ft
+from  import cli
+from  import typing as ft
 from .ctx import AppContext
 from .ctx import RequestContext
 from .globals import _cv_app
