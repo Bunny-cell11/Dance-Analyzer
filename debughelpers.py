@@ -5,13 +5,13 @@ import typing as t
 from jinja2.loaders import BaseLoader
 from werkzeug.routing import RequestRedirect
 
-from .blueprints import Blueprint
-from .globals import request_ctx
-from .sansio.app import App
+from blueprints import Blueprint
+from globals import request_ctx
+from sansio.app import App
 
 if t.TYPE_CHECKING:
-    from .sansio.scaffold import Scaffold
-    from .wrappers import Request
+    from sansio.scaffold import Scaffold
+    from wrappers import Request
 
 
 class UnexpectedUnicodeError(AssertionError, UnicodeError):
