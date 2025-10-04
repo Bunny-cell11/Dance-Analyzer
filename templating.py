@@ -17,8 +17,6 @@ from signals import template_rendered
 
 if t.TYPE_CHECKING:  # pragma: no cover
     from app import Flask
-    from sansio.app import App
-    from sansio.scaffold import Scaffold
 
 
 def _default_template_ctx_processor() -> dict[str, t.Any]:
