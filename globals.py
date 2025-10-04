@@ -10,7 +10,6 @@ if t.TYPE_CHECKING:  # pragma: no cover
     from ctx import _AppCtxGlobals
     from ctx import AppContext
     from ctx import RequestContext
-    from sessions import SessionMixin
     from wrappers import Request
 
 
