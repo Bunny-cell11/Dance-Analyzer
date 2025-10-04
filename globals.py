@@ -6,12 +6,12 @@ from contextvars import ContextVar
 from werkzeug.local import LocalProxy
 
 if t.TYPE_CHECKING:  # pragma: no cover
-    from .app import Flask
-    from .ctx import _AppCtxGlobals
-    from .ctx import AppContext
-    from .ctx import RequestContext
-    from .sessions import SessionMixin
-    from .wrappers import Request
+    from app import Flask
+    from ctx import _AppCtxGlobals
+    from ctx import AppContext
+    from ctx import RequestContext
+    from sessions import SessionMixin
+    from wrappers import Request
 
 
 _no_app_msg = """\
