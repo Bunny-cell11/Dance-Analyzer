@@ -13,16 +13,16 @@ from werkzeug.exceptions import abort as _wz_abort
 from werkzeug.utils import redirect as _wz_redirect
 from werkzeug.wrappers import Response as BaseResponse
 
-from .globals import _cv_app
-from .globals import _cv_request
-from .globals import current_app
-from .globals import request
-from .globals import request_ctx
-from .globals import session
-from .signals import message_flashed
+from globals import _cv_app
+from globals import _cv_request
+from globals import current_app
+from globals import request
+from globals import request_ctx
+from globals import session
+from signals import message_flashed
 
 if t.TYPE_CHECKING:  # pragma: no cover
-    from .wrappers import Response
+    from wrappers import Response
 
 
 def get_debug_flag() -> bool:
