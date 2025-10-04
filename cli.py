@@ -20,9 +20,9 @@ from werkzeug import run_simple
 from werkzeug.serving import is_running_from_reloader
 from werkzeug.utils import import_string
 
-from .globals import current_app
-from .helpers import get_debug_flag
-from .helpers import get_load_dotenv
+from globals import current_app
+from helpers import get_debug_flag
+from helpers import get_load_dotenv
 
 if t.TYPE_CHECKING:
     import ssl
@@ -31,7 +31,7 @@ if t.TYPE_CHECKING:
     from _typeshed.wsgi import WSGIApplication
     from _typeshed.wsgi import WSGIEnvironment
 
-    from .app import Flask
+    from app import Flask
 
 
 class NoAppException(click.UsageError):
