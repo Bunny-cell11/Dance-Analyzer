@@ -4,7 +4,7 @@
 Commonly useful filters for `attrs.asdict` and `attrs.astuple`.
 """
 
-from ._make import Attribute
+from _make import Attribute
 
 
 def _split_what(what):
