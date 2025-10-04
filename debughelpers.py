@@ -10,7 +10,6 @@ from globals import request_ctx
 from sansio.app import App
 
 if t.TYPE_CHECKING:
-    from sansio.scaffold import Scaffold
     from wrappers import Request
 
 
