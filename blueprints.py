@@ -4,15 +4,15 @@ import os
 import typing as t
 from datetime import timedelta
 
-from .cli import AppGroup
-from .globals import current_app
-from .helpers import send_from_directory
-from .sansio.blueprints import Blueprint as SansioBlueprint
-from .sansio.blueprints import BlueprintSetupState as BlueprintSetupState  # noqa
-from .sansio.scaffold import _sentinel
+from cli import AppGroup
+from globals import current_app
+from helpers import send_from_directory
+from sansio.blueprints import Blueprint as SansioBlueprint
+from sansio.blueprints import BlueprintSetupState as BlueprintSetupState  # noqa
+from sansio.scaffold import _sentinel
 
 if t.TYPE_CHECKING:  # pragma: no cover
-    from .wrappers import Response
+    from wrappers import Response
 
 
 class Blueprint(SansioBlueprint):
