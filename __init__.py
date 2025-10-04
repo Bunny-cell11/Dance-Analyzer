@@ -124,7 +124,7 @@ if __NUMPY_SETUP__:
     sys.stderr.write('Running from numpy source directory.\n')
 else:
     # Allow distributors to run custom init code before importing numpy.core
-    from . import _distributor_init
+    from  import _distributor_init
 
     try:
         from numpy.__config__ import show as show_config
@@ -141,23 +141,23 @@ else:
     # mapping of {name: (value, deprecation_msg)}
     __deprecated_attrs__ = {}
 
-    from . import core
+    from  import core
     from core import *
-    from . import compat
-    from . import exceptions
-    from . import dtypes
-    from . import lib
+    from  import compat
+    from  import exceptions
+    from  import dtypes
+    from  import lib
     # NOTE: to be revisited following future namespace cleanup.
     # See gh-14454 and gh-15672 for discussion.
     from lib import *
 
-    from . import linalg
-    from . import fft
-    from . import polynomial
-    from . import random
-    from . import ctypeslib
-    from . import ma
-    from . import matrixlib as _mat
+    from  import linalg
+    from  import fft
+    from  import polynomial
+    from  import random
+    from  import ctypeslib
+    from  import ma
+    from  import matrixlib as _mat
     from matrixlib import *
 
     # Deprecations introduced in NumPy 1.20.0, 2020-06-06
