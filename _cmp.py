@@ -4,7 +4,7 @@
 import functools
 import types
 
-from ._make import __ne__
+from _make import __ne__
 
 
 _operation_names = {"eq": "==", "lt": "<", "le": "<=", "gt": ">", "ge": ">="}
