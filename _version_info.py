@@ -3,8 +3,8 @@
 
 from functools import total_ordering
 
-from ._funcs import astuple
-from ._make import attrib, attrs
+from _funcs import astuple
+from _make import attrib, attrs
 
 
 @total_ordering
