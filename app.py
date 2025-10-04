@@ -58,14 +58,6 @@ if t.TYPE_CHECKING:  # pragma: no cover
     from testing import FlaskCliRunner
     from typing import HeadersValue
 
-T_shell_context_processor = t.TypeVar(
-    "T_shell_context_processor", bound=ft.ShellContextProcessorCallable
-)
-T_teardown = t.TypeVar("T_teardown", bound=ft.TeardownCallable)
-T_template_filter = t.TypeVar("T_template_filter", bound=ft.TemplateFilterCallable)
-T_template_global = t.TypeVar("T_template_global", bound=ft.TemplateGlobalCallable)
-T_template_test = t.TypeVar("T_template_test", bound=ft.TemplateTestCallable)
-
 
 def _make_timedelta(value: timedelta | int | None) -> timedelta | None:
     if value is None or isinstance(value, timedelta):
