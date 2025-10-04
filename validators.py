@@ -10,10 +10,10 @@ import re
 from contextlib import contextmanager
 from re import Pattern
 
-from ._config import get_run_validators, set_run_validators
-from ._make import _AndValidator, and_, attrib, attrs
-from .converters import default_if_none
-from .exceptions import NotCallableError
+from _config import get_run_validators, set_run_validators
+from _make import _AndValidator, and_, attrib, attrs
+from converters import default_if_none
+from exceptions import NotCallableError
 
 
 __all__ = [
