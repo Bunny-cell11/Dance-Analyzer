@@ -8,7 +8,7 @@ from types import TracebackType
 
 from werkzeug.exceptions import HTTPException
 
-from  import typing as ft
+import typing as ft
 from globals import _cv_app
 from globals import _cv_request
 from signals import appcontext_popped
