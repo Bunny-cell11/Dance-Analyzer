@@ -7,18 +7,18 @@ from jinja2 import Environment as BaseEnvironment
 from jinja2 import Template
 from jinja2 import TemplateNotFound
 
-from .globals import _cv_app
-from .globals import _cv_request
-from .globals import current_app
-from .globals import request
-from .helpers import stream_with_context
-from .signals import before_render_template
-from .signals import template_rendered
+from globals import _cv_app
+from globals import _cv_request
+from globals import current_app
+from globals import request
+from helpers import stream_with_context
+from signals import before_render_template
+from signals import template_rendered
 
 if t.TYPE_CHECKING:  # pragma: no cover
-    from .app import Flask
-    from .sansio.app import App
-    from .sansio.scaffold import Scaffold
+    from app import Flask
+    from sansio.app import App
+    from sansio.scaffold import Scaffold
 
 
 def _default_template_ctx_processor() -> dict[str, t.Any]:
