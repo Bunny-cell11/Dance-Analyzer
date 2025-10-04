@@ -14,14 +14,14 @@ from click.testing import Result
 from werkzeug.test import Client
 from werkzeug.wrappers import Request as BaseRequest
 
-from .cli import ScriptInfo
-from .sessions import SessionMixin
+from cli import ScriptInfo
+from sessions import SessionMixin
 
 if t.TYPE_CHECKING:  # pragma: no cover
     from _typeshed.wsgi import WSGIEnvironment
     from werkzeug.test import TestResponse
 
-    from .app import Flask
+    from app import Flask
 
 
 class EnvironBuilder(werkzeug.test.EnvironBuilder):
