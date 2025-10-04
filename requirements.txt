@@ -1,0 +1,7 @@
+Flask
+gunicorn
+mediapipe
+opencv-python-headless
+numpy
+pytest
+
