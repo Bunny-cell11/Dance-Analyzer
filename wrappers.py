@@ -7,9 +7,9 @@ from werkzeug.exceptions import HTTPException
 from werkzeug.wrappers import Request as RequestBase
 from werkzeug.wrappers import Response as ResponseBase
 
-from . import json
-from .globals import current_app
-from .helpers import _split_blueprint_path
+from  import json
+from globals import current_app
+from helpers import _split_blueprint_path
 
 if t.TYPE_CHECKING:  # pragma: no cover
     from werkzeug.routing import Rule
