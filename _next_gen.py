@@ -7,17 +7,17 @@ default values.
 
 from functools import partial
 
-from . import setters
-from ._funcs import asdict as _asdict
-from ._funcs import astuple as _astuple
-from ._make import (
+from  import setters
+from _funcs import asdict as _asdict
+from _funcs import astuple as _astuple
+from _make import (
     _DEFAULT_ON_SETATTR,
     NOTHING,
     _frozen_setattrs,
     attrib,
     attrs,
 )
-from .exceptions import UnannotatedAttributeError
+from exceptions import UnannotatedAttributeError
 
 
 def define(
