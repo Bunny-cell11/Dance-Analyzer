@@ -4,4 +4,3 @@ mediapipe
 opencv-python-headless
 numpy
 pytest
-sansio
