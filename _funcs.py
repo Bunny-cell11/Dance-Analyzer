@@ -3,9 +3,9 @@
 
 import copy
 
-from ._compat import PY_3_9_PLUS, get_generic_base
-from ._make import _OBJ_SETATTR, NOTHING, fields
-from .exceptions import AttrsAttributeNotFoundError
+from _compat import PY_3_9_PLUS, get_generic_base
+from _make import _OBJ_SETATTR, NOTHING, fields
+from exceptions import AttrsAttributeNotFoundError
 
 
 def asdict(
