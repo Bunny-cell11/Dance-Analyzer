@@ -6,8 +6,8 @@ Commonly useful converters.
 
 import typing
 
-from ._compat import _AnnotationExtractor
-from ._make import NOTHING, Converter, Factory, pipe
+from _compat import _AnnotationExtractor
+from _make import NOTHING, Converter, Factory, pipe
 
 
 __all__ = [
