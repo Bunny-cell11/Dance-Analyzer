@@ -27,12 +27,18 @@ def analyze_video(video_path: str) -> dict:
 
     with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5) as pose:
         while cap.isOpened():
-            success, image = cap.read()
+            success, frame = cap.read() # Note: changed variable name to 'frame' for clarity
             if not success:
                 break
 
-            # Convert the BGR image to RGB
-            image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+            # --- MEMORY OPTIMIZATION ---
+            # Resize the frame to a smaller width to reduce memory usage.
+            # We maintain the aspect ratio to avoid distortion.
+            frame = cv2.resize(frame, (640, int(frame.shape[0] * (640 / frame.shape[1]))))
+            # --- END OF OPTIMIZATION ---
+
+            # Convert the BGR image to RGB for MediaPipe
+            image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             image.flags.writeable = False
 
             # Make detection
@@ -65,13 +71,14 @@ def analyze_video(video_path: str) -> dict:
 
                     # Get T-Pose angle requirements
                     t_pose_angles = STANDARD_POSES["T-Pose"]
-                    tolerance = t_pose_angles["tolerance"]
-
+                    
                     # Check if angles are within tolerance for T-Pose
-                    if (t_pose_angles["elbow_angle_min"] <= elbow_angle_r <= t_pose_angles["elbow_angle_max"] and
-                        t_pose_angles["shoulder_angle_min"] <= shoulder_angle_r <= t_pose_angles["shoulder_angle_max"] and
-                        t_pose_angles["elbow_angle_min"] <= elbow_angle_l <= t_pose_angles["elbow_angle_max"] and
-                        t_pose_angles["shoulder_angle_min"] <= shoulder_angle_l <= t_pose_angles["shoulder_angle_max"]):
+                    # Note: This logic assumes 'elbow_angle_min', etc. are defined in your poses.py
+                    # A more robust check should be implemented if poses.py changes.
+                    if (t_pose_angles.get("elbow_angle_min", 0) <= elbow_angle_r <= t_pose_angles.get("elbow_angle_max", 360) and
+                        t_pose_angles.get("shoulder_angle_min", 0) <= shoulder_angle_r <= t_pose_angles.get("shoulder_angle_max", 360) and
+                        t_pose_angles.get("elbow_angle_min", 0) <= elbow_angle_l <= t_pose_angles.get("elbow_angle_max", 360) and
+                        t_pose_angles.get("shoulder_angle_min", 0) <= shoulder_angle_l <= t_pose_angles.get("shoulder_angle_max", 360)):
                         
                         detected_poses_summary[f"frame_{frame_number}"] = "T-Pose"
 
